@@ -1,4 +1,4 @@
-package application.flow;
+package mts.homework.sivelkaev.application.flow;
 
 import org.camunda.bpm.spring.boot.starter.annotation.EnableProcessApplication;
 import org.springframework.boot.SpringApplication;
