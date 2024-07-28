@@ -1,5 +1,4 @@
 spring:
-
   kafka:
     consumer:
       auto-offset-reset: earliest
@@ -32,3 +31,7 @@ camunda:
       enabled: false
       db-reporter-activate: false
     auto-deployment-enabled: false
+
+integration:
+  history-check:
+    url: http://localhost:8083/mts-homework-sivelkaev-application-history-check

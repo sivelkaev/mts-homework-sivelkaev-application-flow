@@ -1,9 +1,9 @@
-package mts.homework.sivelkaev.application.flow.kafka;
+package mts.homework.sivelkaev.application.flow.kafka.consumer;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import mts.homework.sivelkaev.application.flow.helper.JsonMarshallingHelper;
-import mts.homework.sivelkaev.application.flow.kafka.dto.ApplicationStartFlowRequest;
+import mts.homework.sivelkaev.application.flow.kafka.dto.request.ApplicationStartFlowRequest;
 import org.camunda.bpm.engine.RuntimeService;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;

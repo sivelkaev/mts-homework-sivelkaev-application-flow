@@ -1,4 +1,4 @@
-package mts.homework.sivelkaev.application.flow.kafka.dto;
+package mts.homework.sivelkaev.application.flow.kafka.dto.request;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;

@@ -12,7 +12,7 @@ import org.springframework.kafka.support.ExponentialBackOffWithMaxRetries;
 public class KafkaConsumerConfiguration {
     @Bean
     public DefaultErrorHandler defaultErrorHandler(KafkaTemplate<String, String> template) {
-        ExponentialBackOffWithMaxRetries backOff = new ExponentialBackOffWithMaxRetries(3);
+        ExponentialBackOffWithMaxRetries backOff = new ExponentialBackOffWithMaxRetries(0);
         backOff.setInitialInterval(1_000L);
         backOff.setMultiplier(2.0);
         backOff.setMaxInterval(10_000L);
