@@ -25,7 +25,8 @@ public class HistoryCheckDelegate implements JavaDelegate {
 
         var successCheck = response.getResult();
 
-        String applicationStatus = successCheck ? "SUCCESS" : "REFUSED";
+        String applicationStatus = successCheck ? "HISTORY_CHECK_SUCCESS" : "HISTORY_CHECK_REFUSED";
         updateStatusService.updateStatus(applicationId, applicationStatus);
+        execution.setVariable("checkHistory", successCheck);
     }
 }

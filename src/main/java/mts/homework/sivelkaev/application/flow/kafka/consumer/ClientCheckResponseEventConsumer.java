@@ -25,7 +25,8 @@ public class ClientCheckResponseEventConsumer {
         ClientCheckResponse res = jsonMarshallingHelper.unmarshall(ClientCheckResponse.class, message);
 
         Map<String, Object> variables = Map.of("id", res.getApplicationId(),
-                "checkStatus", res.getStatus());
+                "checkStatus", res.getStatus(),
+                "clientId", res.getClientId());
         runtimeService.correlateMessage("ClientCheck", res.getApplicationId().toString(), variables);
     }
 }

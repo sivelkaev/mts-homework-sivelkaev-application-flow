@@ -20,7 +20,14 @@ public class ClientCheckResponseDelegate implements JavaDelegate {
         log.info("Start client check response");
 
         var applicationId = execution.getVariable("id").toString();
-        var checkStatus = Integer.valueOf(execution.getVariable("checkStatus").toString());
+
+        int checkStatus;
+        if (execution.getVariable("checkStatus") != null) {
+            checkStatus = Integer.parseInt(execution.getVariable("checkStatus").toString());
+        } else {
+            checkStatus = 999;
+            execution.setVariable("checkStatus", checkStatus);
+        }
 
         String applicationStatus = SUCCESS_CHECK_STATUS.equals(checkStatus) ? "CLIENT_CHECK_SUCCESS" : "CLIENT_CHECK_FAILED";
 
