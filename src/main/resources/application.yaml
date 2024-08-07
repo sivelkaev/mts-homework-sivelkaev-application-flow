@@ -1,0 +1,37 @@
+spring:
+  kafka:
+    consumer:
+      auto-offset-reset: earliest
+      enable-auto-commit: false
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      properties:
+        allow:
+          auto:
+            create:
+              topics: false
+        isolation:
+          level: read_committed
+    listener:
+      type: SINGLE
+      ack-mode: RECORD
+      missing-topics-fatal: true
+
+camunda:
+  bpm:
+    application:
+      delete-upon-undeploy: false
+      scan-for-process-definitions: false
+      deploy-changed-only: true
+      resume-previous-versions: true
+      resume-previous-by: a value
+    job-execution:
+      enabled: true
+    metrics:
+      enabled: false
+      db-reporter-activate: false
+    auto-deployment-enabled: false
+
+integration:
+  history-check:
+    url: http://localhost:8083/mts-homework-sivelkaev-application-history-check
